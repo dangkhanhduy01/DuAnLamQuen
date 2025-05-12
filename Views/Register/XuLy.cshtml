@@ -1,0 +1,11 @@
+﻿@model PersonViewModel
+<h3>Thông tin đăng ký</h3>
+<hr />
+<ul>
+    <li>Họ tên: <b> @Model.FullName </b></li>
+    <li>Ngày sinh:<b> @Model.BirthDay.ToString("dd/MM/yyyy") </b> </li>
+    <li>
+        Hình đại diện: <br>
+        <img src="/images/@Model.Picture" width="200px" />
+    </li>
+</ul>

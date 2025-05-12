@@ -1,0 +1,30 @@
+﻿@model MayTinhModel
+<h2>TÍNH TOÁN ĐƠN GIẢN</h2>
+
+<hr />
+<form asp-action="XuLy" method="post">
+    <div class="form-group">
+        <label>Nhập số thứ 1</label>
+        <input asp-for="so1" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Nhập số thứ 2</label>
+        <input asp-for="so2" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Chọn phép tính</label>
+        <select class="form-control" asp-for="PhepTinh">
+            <option value="+">Cộng</option>
+            <option value="-">Trừ</option>
+            <option value="*">Nhân</option>
+            <option value="/">Chia</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Tính</button>
+</form>
+@if (ViewBag.KQ != null)
+{
+    <div class="alert alert-info mt-2">
+        <h6>Kết quả: @ViewBag.KQ</h6>
+    </div>
+}
