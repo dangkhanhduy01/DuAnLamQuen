@@ -50,7 +50,7 @@ namespace DuAnLamQuen
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=maytinh}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
